@@ -1,6 +1,6 @@
 # PHP Skeleton project
 
-##Introduction
+## Introduction
 This repository serves as a starting point for any PHP project.
 It configures PHP_Codsniffer and PHPUnit.
 These tools are accessible via the following commands : 
