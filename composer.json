@@ -1,0 +1,38 @@
+{
+    "name": "olivier/test",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.0"
+        }
+    },
+    "scripts": {
+        "style": "phpcs -p --standard=PSR12 --exclude=Generic.Files.LineLength src tests",
+        "fix-style": "phpcbf -p --standard=PSR12 src tests",
+        "phpunit": "phpunit --configuration phpunit.xml",
+        "test": [
+            "phpcs -p --standard=PSR12 --exclude=Generic.Files.LineLength --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+            "phpunit --configuration phpunit.xml"
+        ]
+    }
+}
