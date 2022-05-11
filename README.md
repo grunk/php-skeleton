@@ -1,4 +1,5 @@
 # PHP Skeleton project
+![Build](https://github.com/grunk/php-skeleton/actions/workflows/php.yml/badge.svg)
 
 ## Introduction
 This repository serves as a starting point for any PHP project.
